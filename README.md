@@ -1,38 +1,33 @@
-# D2CPhotoStation (WinForms .NET Framework 4.8)
+📷 D2C Photo Capture Workstation
 
-This is a complete Visual Studio solution for a photo capture workstation using:
-- AForge.Video
-- AForge.Video.DirectShow
+A C# Windows Forms application built for warehouse and repair environments to capture standardized device photos using a webcam.
 
-## Features
-- Auto-start webcam stream when the form opens
-- Live preview in `picLive`
-- `Take Picture` fills Front then Back; prompts overwrite when both exist
-- `Save` prompts for folder name and saves:
-  - Front.jpg
-  - Back.jpg
-  into: `<BaseSavePath>\<FolderName>\`
-- After saving: clears Front/Back for next device
-- Reset Front / Reset Back buttons
-- Settings button (password protected: ctdi / Ctdi123@)
-  - select a different camera
-  - select destination base folder
-- Exit button
-- Safe UI updates via BeginInvoke
-- Maintains latest frame buffer for snapshot capture
-- Proper bitmap disposal to prevent memory leaks
-- Safe camera stop on form close
+The application provides live camera preview, guided front and back photo capture, secure settings, and automated image saving with a simple, operator-friendly interface.
 
-## NuGet restore
-Open the solution in Visual Studio and:
-- Right click solution -> Restore NuGet Packages
-(or enable "NuGet Package Restore" and build once)
+Key Features
 
-Packages used (2.2.5):
-- AForge.Video
-- AForge.Video.DirectShow
+Live webcam streaming (AForge.Video / DirectShow)
 
-## Default save path
-`AppState.BaseSavePath` defaults to:
-`C:\Users\sumit\OneDrive\Desktop\D2C\`
-Change it from Settings inside the app.
+Front and Back photo capture workflow
+
+Automated image saving (Front.jpg, Back.jpg)
+
+Password-protected settings (camera and save location)
+
+Large, accessible UI controls
+
+Manual command input (keyboard / barcode scanner friendly)
+
+Safe camera and memory management
+
+Technology
+
+C# (.NET Framework 4.8)
+
+Windows Forms
+
+AForge.Video
+
+Use Case
+
+Designed for high-throughput warehouse and repair workstations where reliability, speed, and ease of use are critical.
